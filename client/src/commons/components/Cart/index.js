@@ -6,6 +6,7 @@ import { getCurrentUser, getCartCurrentUser } from '../../../models/User'
 import Button from '../../widgets/Button'
 
 import './style.scss'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const currentUser = getCurrentUser()
@@ -97,7 +98,9 @@ const Cart = () => {
                             {cart && cart.length}
                         </div>
                     )}
-                    <CartIcon className="header-actions__icon" />
+                    <Link to="/cart">
+                        <CartIcon className="header-actions__icon" />
+                    </Link>
                 </div>
             </Tippy>
         </>

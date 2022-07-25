@@ -51,6 +51,7 @@ function Filters({ totalProducts }) {
     }
     const handleChangeType = (value) => {
         dispatch(setType(value))
+        dispatch(setPage(1))
     }
 
     return (

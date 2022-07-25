@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Tippy from '@tippyjs/react'
+import { Link } from 'react-router-dom'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import PostService from '../../../services/PostService'
 import Button from '../../widgets/Button'
@@ -88,7 +89,10 @@ const Notification = () => {
                     </div>
                 )}
             >
-                <NotificationsNoneIcon className="header-actions__icon" />
+                <Link to="/posts">
+                    {' '}
+                    <NotificationsNoneIcon className="header-actions__icon" />
+                </Link>
             </Tippy>
         </>
     )
