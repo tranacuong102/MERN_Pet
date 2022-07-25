@@ -1,0 +1,119 @@
+@import '../variables.scss';
+
+.payments-history {
+    .table {
+        margin-top: 10px;
+    }
+}
+.payments-username {
+    color: $color-red;
+}
+
+.payments-list {
+    color: $color-blue;
+}
+.payment-item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.payment-name {
+    height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.payment-price {
+    width: 160px;
+    text-align: right;
+}
+.payment-address {
+    font-size: 14px;
+}
+
+.payment-total {
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-red;
+}
+
+td {
+    padding: 4px;
+}
+
+.payments-admin__search {
+    margin: 10px 0 20px;
+    &-form {
+        display: flex;
+        align-items: center;
+    }
+    &-input {
+        width: 280px;
+    }
+    &-submit {
+        position: relative;
+        left: 10px;
+    }
+}
+
+.payments-user__list {
+    margin-top: 10px;
+}
+.payments-user__item {
+    background-color: #efd7d7;
+    padding: 10px;
+}
+.payments-user__item-img {
+    width: 30%;
+    height: 70px;
+    border: 1px solid $color-gray;
+    padding: 2px;
+    object-fit: cover;
+}
+.payments-user__item-wrap {
+    display: flex;
+}
+.payments-user__item-info {
+    padding-left: 10px;
+}
+.payments-user__item-name {
+    height: 24px;
+    font-size: 16px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.payments-user__item-origin {
+    font-size: 14px;
+}
+.payments-user__item-price {
+    color: $color-red;
+}
+.payments-user__item-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.payments-user__item-total {
+    font-size: 14px;
+    span {
+        color: $color-red;
+        font-size: 15px;
+        padding-left: 4px;
+    }
+}
+
+@media (max-width: 899px) {
+    .payments-history {
+        padding: 0 10px;
+    }
+}

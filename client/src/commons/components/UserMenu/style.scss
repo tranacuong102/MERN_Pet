@@ -1,0 +1,83 @@
+@import '../../../styles/variables.scss';
+
+.header {
+    &-menu {
+        position: relative;
+        &__list {
+            width: 224px;
+            min-height: 100px;
+            margin-top: 2px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 5px #ccc;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                right: 26px;
+                z-index: 1;
+                border-width: 10px 20px;
+                border-top: 0;
+                border-style: solid;
+                border-color: transparent transparent #f1f1f1 transparent;
+                cursor: pointer;
+            }
+        }
+        &__item {
+            margin-left: 0 !important;
+            justify-content: flex-start;
+            color: $color-text;
+            border-radius: 0;
+            height: 46px;
+            transition: 0.35s linear all;
+            background-color: #f1f1f1;
+            &:hover {
+                background-color: #dbdbdb;
+            }
+
+            &.separate {
+                color: $color-red;
+                border-top: 1px solid rgba(22, 24, 35, 0.12);
+            }
+        }
+        &__btn {
+            padding: 6px 19px;
+            margin-left: 12px;
+            background-color: transparent;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'ProximaNova', sans-serif;
+            font-weight: 600;
+            margin-top: -8px;
+            height: 50px;
+            font-size: 2rem;
+            position: relative;
+            &-icon {
+                position: absolute;
+                padding: 15px;
+                left: 0;
+                cursor: pointer;
+            }
+        }
+        &__sub-title {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            font-size: 22px;
+            font-weight: 600;
+            background-color: #f1f1f1;
+        }
+        &__back {
+            width: 70px !important;
+            height: 40px !important;
+            cursor: pointer;
+        }
+    }
+}

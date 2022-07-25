@@ -1,0 +1,12 @@
+.products-main {
+    margin-top: -30px;
+}
+
+@media (max-width: 899px) {
+    .products-main {
+        padding: 0 10px;
+    }
+    .products-sidebar {
+        display: none;
+    }
+}

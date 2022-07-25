@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+.btn {
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 9px 16px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    + .btn {
+        margin-left: 12px;
+    }
+    &.fullWidth {
+        width: 100%;
+    }
+    &.disable {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+    &__icon-left {
+        padding-right: 30px;
+        display: inline-block;
+        width: 34px;
+        text-align: center;
+        margin-top: 3px;
+    }
+    &.secondary {
+        background-color: $color-white;
+    }
+    &.primary {
+        background-color: $color-red;
+        color: $color-white;
+    }
+    &.success {
+        background-color: #28a745;
+        color: $color-white;
+    }
+}

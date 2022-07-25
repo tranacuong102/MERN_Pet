@@ -1,0 +1,134 @@
+@import '../../../styles/variables.scss';
+
+.header {
+    &-cart {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__content {
+            &-img {
+                width: 80%;
+            }
+        }
+        &__title {
+            color: $color-red;
+        }
+        &__number {
+            position: absolute;
+            top: -8px;
+            right: -4px;
+            color: $color-white;
+            background-color: $color-red;
+            padding: 2px 10px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+        &__list {
+            max-height: 45vh;
+            overflow-y: auto;
+        }
+        &__item {
+            display: flex;
+        }
+        &__icon {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.header-cart__item {
+    padding: 10px;
+    &:hover {
+        background-color: #f1f1f1;
+    }
+    img {
+        width: 20%;
+        height: 50px;
+        object-fit: cover;
+    }
+    .cart-item__info {
+        width: 60%;
+        flex: 1;
+        text-align: left;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &-origin {
+            font-size: 14px;
+        }
+    }
+    .cart-item__price {
+        width: 20%;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: right;
+        color: $color-red;
+    }
+}
+
+.btn-show-cart {
+    border-radius: 0;
+    position: absolute;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .header {
+        &-cart {
+            margin-left: 20px;
+            &__number {
+                right: -4px;
+            }
+        }
+        &-tippy__wrapper {
+            width: 360px !important;
+
+            transform: translateX(-58%) !important;
+            &::before {
+                transform: translateX(22%) !important;
+            }
+        }
+    }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    .header {
+        &-cart {
+            margin-right: 10px;
+            &__number {
+                right: 14px;
+            }
+        }
+        &-tippy__wrapper {
+            width: 310px !important;
+            right: 50% !important;
+            transform: translateX(-87%) !important;
+            &::before {
+                right: 50% !important;
+                transform: translateX(238%) !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .header {
+        &-tippy__wrapper {
+            width: 310px !important;
+            right: 50% !important;
+            transform: translateX(-80%) !important;
+            &::before {
+                right: 50% !important;
+                transform: translateX(182%) !important;
+            }
+        }
+    }
+}

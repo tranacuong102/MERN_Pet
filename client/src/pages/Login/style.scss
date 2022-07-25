@@ -1,0 +1,79 @@
+@import '../../styles/variables.scss';
+
+.auth-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../../assets/images/bg_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+    &__wrapper {
+        width: 400px;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+    }
+}
+
+.auth-header {
+    padding: 10px 30px;
+    font-size: 22px;
+    color: $color-blue;
+    font-family: SofiaPro;
+}
+
+.auth-body {
+    text-align: center;
+}
+.auth-forgot-password a {
+    color: $color-red;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.auth-form__group {
+    margin: 10px 0;
+}
+
+.auth-form__input {
+    margin: 16px 0 !important;
+    width: 100%;
+}
+.login-card {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.forgot-password a {
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-end;
+    color: $color-primary;
+}
+.auth-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .auth-page {
+        &__wrapper {
+            width: 94%;
+            top: 16%;
+        }
+        .css-cs50bh-MuiButtonBase-root-MuiButton-root {
+            font-size: 0.8rem;
+            min-width: 100px;
+        }
+    }
+    .auth-footer {
+        padding: 10px;
+    }
+}

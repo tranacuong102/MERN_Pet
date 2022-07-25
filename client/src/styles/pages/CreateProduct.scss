@@ -1,0 +1,99 @@
+@import '../variables.scss';
+
+.create-product {
+    margin-top: 20px;
+    &__upload {
+        .upload-heading {
+            text-align: center;
+            color: $color-red;
+        }
+        .upload-content {
+            max-width: 100%;
+            height: 450px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px;
+            position: relative;
+        }
+    }
+    &__heading {
+        text-align: center;
+        color: $color-red;
+        padding: 5px 0;
+    }
+    &__category {
+        margin-top: 10px;
+        padding: 6px 0;
+    }
+}
+
+.category-form__submit {
+    display: flex;
+    justify-content: center;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    margin-right: 20px;
+}
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+    margin-top: 10px !important;
+}
+
+#file_upload {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+#file_upload::before {
+    content: '+';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $color-white;
+    color: rgb(250, 200, 107);
+    font-size: 20rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#file_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#file_img img {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+#file_img span {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: $color-white;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    color: $color-red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 899px) {
+    .create-product {
+        padding: 0 10px;
+    }
+}

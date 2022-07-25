@@ -1,0 +1,141 @@
+@import '../variables.scss';
+
+.detail-product {
+    &__cart {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 1px 5px #ccc;
+        img {
+            width: 100%;
+        }
+        .product-price {
+            color: $color-red;
+            text-align: center;
+            display: block;
+            font-weight: 600;
+            font-size: 26px;
+        }
+        &-info {
+            padding: 10px 20px;
+        }
+        &-btn {
+            border: 1px solid $color-red;
+            border-radius: 92px;
+            margin: 10px 0;
+            &.btn {
+                margin-left: 0;
+            }
+            &--buy {
+                background-color: $color-red;
+                color: $color-white;
+            }
+        }
+    }
+    .slogan {
+        margin-top: 20px;
+        span {
+            color: $color-blue;
+            padding-left: 20px;
+            font-size: 22px;
+            text-shadow: 1px 1px 5px #eb6309;
+        }
+    }
+}
+
+.store-commit {
+    margin-top: 30px;
+    &__heading {
+        color: $color-red;
+    }
+    &__list {
+        list-style: none;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    &__item {
+        padding: 4px 0;
+        span {
+            padding-left: 10px;
+        }
+    }
+}
+
+.related-product {
+    margin-top: 20px;
+    &__heading {
+        padding-bottom: 10px;
+        color: $color-red;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        width: 24%;
+        margin: 10px;
+    }
+}
+
+.detail-product__item {
+    padding: 6px;
+}
+
+.detail-product {
+    .slick-next,
+    .slick-prev {
+        display: none !important;
+    }
+}
+
+// RESPONSIVE
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .main-body {
+        overflow-x: hidden;
+    }
+    .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-6.css-honmcm-MuiGrid-root {
+        flex-direction: column-reverse;
+    }
+    .related-product {
+        padding: 0 10px;
+    }
+    .css-mhc70k-MuiGrid-root {
+        padding: 0 10px;
+    }
+    .detail-product__actions-footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        padding-top: 10px;
+        background-color: $color-white;
+        box-shadow: 0 1px 5px #ccc;
+        width: 100%;
+    }
+    .btn.detail-product__actions-item {
+        border-radius: 0;
+    }
+    .btn + .btn {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 899px) {
+    .detail-product {
+        padding: 0 10px;
+    }
+    .detail-product__info-title {
+        font-size: 22px;
+    }
+    .related-product__list {
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 600px) {
+    .detail-product__actions-footer {
+        display: none;
+    }
+}

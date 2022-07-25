@@ -1,0 +1,50 @@
+@import '../variables.scss';
+
+.create-category {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 0;
+    .css-9tj150-MuiButton-endIcon {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .css-t0o9m7-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root {
+        min-width: 151px;
+    }
+}
+
+.create-category__wrapper form {
+    display: flex;
+    align-items: center;
+}
+.create-category__input input {
+    width: 300px;
+}
+.create-category__actions {
+    margin-left: 20px;
+}
+.create-category__actions button {
+    margin: 0 10px;
+}
+.select-label {
+    margin-left: 20px;
+}
+
+.category-select-list {
+    width: 160px;
+    height: 40px;
+}
+.category-form__submit {
+    margin-left: 10px;
+}
+.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    margin-right: 20px;
+}
+
+.category-table {
+    width: 100%;
+    margin-top: 20px;
+}
+.table {
+    width: 100%;
+}

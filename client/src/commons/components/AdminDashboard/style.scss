@@ -1,0 +1,20 @@
+.admin-dashboard {
+    .admin-wrapper {
+        background-color: #f1f1f1;
+        padding: 10px;
+        .admin-text {
+            font-size: 28px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 899px) {
+    .admin-dashboard {
+        .admin-actions__item {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+    }
+}

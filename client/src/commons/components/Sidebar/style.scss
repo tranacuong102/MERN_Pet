@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+
+.sidebar {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    margin-top: 20px;
+    box-shadow: 0 1px 5px #ccc;
+}
+.sidebar-header {
+    padding: 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    font-family: Sofiapro sans-serif;
+    border-bottom: 1px solid #999;
+}
+.category-menu-icon {
+    padding-right: 10px;
+    width: 36px !important;
+    height: 36px !important;
+}
+.category-item {
+    justify-content: flex-start;
+    border-radius: 0;
+    transition: all 0.35s ease-in-out;
+    color: $color-text;
+    &:hover {
+        color: $color-red;
+        background-color: $color-white;
+        padding-left: 26px;
+    }
+    + .btn {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .sidebar-header {
+        padding: 0 0 10px 2px;
+    }
+    .btn.category-item {
+        padding: 9px 4px;
+    }
+}

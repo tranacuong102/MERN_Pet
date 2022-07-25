@@ -1,0 +1,63 @@
+@import '../../../styles/variables.scss';
+
+.header {
+    &-posts {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__content {
+            &-heading {
+                text-align: left;
+                padding: 4px 10px;
+                border-bottom: 1px solid #f1f1f1;
+            }
+        }
+        &__title {
+            color: $color-red;
+        }
+        &__list {
+            max-height: 35vh;
+            overflow-y: auto;
+        }
+        &__item {
+            display: flex;
+        }
+    }
+}
+
+.header-posts__item {
+    padding: 10px;
+    &:hover {
+        background-color: #f1f1f1;
+    }
+    img {
+        width: 20%;
+        height: 50px;
+        object-fit: cover;
+    }
+    .posts-item__info {
+        width: 60%;
+        flex: 1;
+        text-align: left;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-title {
+            font-weight: 400;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &-date {
+            font-size: 14px;
+            text-align: right;
+            font-style: italic;
+        }
+    }
+}
+
+.btn-show-posts {
+    border-radius: 0;
+    position: absolute;
+}

@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+.modal-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: $color-white;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
+    &.open {
+        transform: translateX(0%);
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        background-color: $color-blue;
+    }
+    &__close {
+        position: absolute;
+        left: 0;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-icon {
+            color: $color-white;
+            font-size: 32px !important;
+        }
+    }
+    &__logo {
+        &-img {
+            width: 60px;
+            margin-top: 1px;
+        }
+    }
+}
+
+.modal-mobile__menu {
+}
+.modal-mobile__list {
+    padding: 30px 10px;
+}
+.modal-mobile__item {
+    margin: 10px 0;
+}
+.modal-mobile__item-link {
+    justify-content: flex-start;
+    font-size: 20px;
+    .btn__icon-left {
+        color: $color-blue;
+    }
+    &.logout {
+        color: $color-red;
+        border-top: 1px solid $color-gray;
+        padding-top: 30px;
+        .btn__icon-left {
+            color: $color-red;
+        }
+    }
+}

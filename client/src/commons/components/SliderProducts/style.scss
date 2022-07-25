@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+.slider-products {
+    margin-top: 50px;
+    &__heading {
+        text-transform: uppercase;
+        font-size: 26px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slider-products__item {
+        padding: 0 10px;
+    }
+}
+.sliders-products__wrapper {
+    margin-top: 12px;
+}
+
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-3.css-1equabv-MuiGrid-root {
+    max-width: 100% !important;
+}
+
+// Responsive
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .slider-products__heading {
+        font-size: 14px;
+    }
+    .slider-products {
+        .css-cs50bh-MuiButtonBase-root-MuiButton-root {
+            padding: 4px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 899px) {
+    .slider-products__heading {
+        padding-left: 10px;
+    }
+}
