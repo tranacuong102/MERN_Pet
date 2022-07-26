@@ -1,6 +1,7 @@
 @import '../variables.scss';
 
 .payments {
+    overflow-x: hidden;
     &__list {
         display: flex;
         justify-content: center;
