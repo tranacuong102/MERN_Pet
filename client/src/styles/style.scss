@@ -42,10 +42,10 @@
         border-radius: 8px;
     }
 
-    // /* Handle on hover */
-    // &::-webkit-scrollbar-thumb:hover {
-    //     background: #c1bebe;
-    // }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #c1bebe;
+    }
 }
 
 html {
@@ -183,5 +183,28 @@ a[href] {
     }
     .main-body {
         padding-top: 70px;
+    }
+}
+
+@media (max-width: 899px) {
+    * {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            display: none;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            display: none;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            display: none;
+        }
     }
 }
