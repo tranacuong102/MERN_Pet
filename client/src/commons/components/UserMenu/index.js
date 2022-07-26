@@ -58,7 +58,7 @@ function Menu({
     return (
         <div className="header-menu">
             <Tippy
-                offset={[23, 7]}
+                offset={[23, 3]}
                 delay={[0, 700]}
                 placement="bottom-end"
                 trigger="mouseenter focus click"

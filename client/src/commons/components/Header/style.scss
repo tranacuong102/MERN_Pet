@@ -54,8 +54,7 @@
         }
     }
     &-notification {
-        display: flex;
-        align-items: center;
+        margin-top: 6px;
         &__icon {
             color: $color-primary;
             width: 33px !important;
@@ -102,7 +101,7 @@
                 border-color: transparent transparent #f8e1db transparent;
             }
             &.tippy-history {
-                width: 140px;
+                width: 140px !important;
                 background: $color-text;
                 color: $color-white;
                 &::before {
@@ -184,7 +183,6 @@
             padding-right: 30px;
         }
         &-notification {
-            margin: 0;
             padding: 0;
         }
         &-auth {

@@ -25,7 +25,7 @@ const Notification = () => {
     return (
         <>
             <Tippy
-                offset={[0, -41]}
+                offset={[0, -20]}
                 delay={[0, 400]}
                 placement="top"
                 animation={false}

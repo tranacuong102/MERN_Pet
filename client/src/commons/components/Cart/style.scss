@@ -4,6 +4,7 @@
     &-cart {
         display: flex;
         align-items: center;
+        margin-top: 8px;
         position: relative;
         &__content {
             &-img {
@@ -84,7 +85,6 @@
 @media (min-width: 900px) and (max-width: 1199px) {
     .header {
         &-cart {
-            margin-left: 20px;
             &__number {
                 right: -4px;
             }
