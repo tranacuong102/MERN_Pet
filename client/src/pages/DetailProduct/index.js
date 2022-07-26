@@ -151,7 +151,11 @@ const DetailProduct = () => {
                 <div className="container">
                     <div className="detail-product">
                         <div className="detail-product__info">
-                            <Grid container spacing={6}>
+                            <Grid
+                                container
+                                spacing={6}
+                                className="detail-product__wrapper"
+                            >
                                 <Grid item xs={12} sm={7} md={8}>
                                     <h2 className="detail-product__info-title">
                                         {detailProduct.title}
