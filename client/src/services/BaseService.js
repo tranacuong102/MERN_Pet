@@ -5,7 +5,7 @@ import CoreService from './CoreService'
 import { processParams } from '../utils/Helper'
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_API_ENDPOINT || 'http://localhost:5000/',
+    baseURL: 'http://localhost:5000/',
     headers: {
         common: {
             'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ const instance = axios.create({
 })
 
 const instanceFormData = axios.create({
-    baseURL: process.env.REACT_APP_API_ENDPOINT || 'http://localhost:5000/',
+    baseURL: 'http://localhost:5000/',
     headers: {
         common: {
             'Content-Type': 'multipart/form-data',
