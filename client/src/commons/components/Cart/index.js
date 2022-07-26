@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     const currentUser = getCurrentUser()
     const cart = getCartCurrentUser()
-
+    console.log(cart)
     return (
         <>
             <Tippy
@@ -32,35 +32,37 @@ const Cart = () => {
                                 {cart && cart.length > 0 ? (
                                     <>
                                         <ul className="header-cart__list">
-                                            {cart.map((item) => (
-                                                <li
-                                                    key={item._id}
-                                                    className="header-cart__item"
-                                                >
-                                                    <img
-                                                        src={item.images}
-                                                        alt=""
-                                                    />
-                                                    <div className="cart-item__info">
-                                                        <h4 className="cart-item__info-name">
-                                                            {item.title}
-                                                        </h4>
-                                                        <div className="cart-item__info-orgin">
-                                                            Xuất xứ:{' '}
-                                                            {item.origin}
+                                            {cart &&
+                                                cart.map((item) => (
+                                                    <li
+                                                        key={item._id}
+                                                        className="header-cart__item"
+                                                    >
+                                                        <img
+                                                            src={item.images}
+                                                            alt=""
+                                                        />
+                                                        <div className="cart-item__info">
+                                                            <h4 className="cart-item__info-name">
+                                                                {item.title}
+                                                            </h4>
+                                                            <div className="cart-item__info-orgin">
+                                                                Xuất xứ:{' '}
+                                                                {item.origin}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="cart-item__price">
-                                                        {item.price.toLocaleString(
-                                                            'vi',
-                                                            {
-                                                                style: 'currency',
-                                                                currency: 'VND',
-                                                            }
-                                                        )}
-                                                    </div>
-                                                </li>
-                                            ))}
+                                                        <div className="cart-item__price">
+                                                            {item.price.toLocaleString(
+                                                                'vi',
+                                                                {
+                                                                    style: 'currency',
+                                                                    currency:
+                                                                        'VND',
+                                                                }
+                                                            )}
+                                                        </div>
+                                                    </li>
+                                                ))}
                                         </ul>
                                         <Button
                                             to="/cart"
