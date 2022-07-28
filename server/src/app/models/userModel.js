@@ -7,8 +7,8 @@ const userSchema = new mongoose.Schema(
         email: { type: String, required: true },
         avatar: { type: String, default: '' },
         roles: { type: Number, default: 1 },
-        coins: { type: Number, default: 150000000 },
         cart: { type: Array, default: [] },
+        coins: { type: Number, default: 100000000 },
     },
     {
         timestamps: true,
