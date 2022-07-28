@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     const currentUser = getCurrentUser()
     const cart = getCartCurrentUser()
-    console.log(cart)
+
     return (
         <>
             <Tippy

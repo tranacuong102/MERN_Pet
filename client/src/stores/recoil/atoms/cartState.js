@@ -4,7 +4,7 @@ const KEY = 'cartState'
 
 const cartState = atom({
     key: KEY,
-    default: null,
+    default: [],
 })
 
 export { cartState }

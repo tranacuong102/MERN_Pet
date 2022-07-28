@@ -229,11 +229,11 @@ function CreateProduct() {
                         </h3>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="title"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         fullWidth
                                         label="Tên sản phẩm"
                                         variant="outlined"
@@ -245,11 +245,11 @@ function CreateProduct() {
                             />
 
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="price"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         type="number"
                                         fullWidth
                                         required
@@ -262,11 +262,11 @@ function CreateProduct() {
                             />
 
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="discount"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         fullWidth
                                         required
                                         type="number"
@@ -279,11 +279,11 @@ function CreateProduct() {
                             />
 
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="quantity"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         required
                                         fullWidth
                                         type="number"
@@ -296,11 +296,11 @@ function CreateProduct() {
                             />
 
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="origin"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         required
                                         fullWidth
                                         label="Xuất xứ *"
@@ -312,11 +312,11 @@ function CreateProduct() {
                             />
 
                             <Controller
-                                className="product-form__item"
                                 control={control}
                                 name="description"
                                 render={({ field }) => (
                                     <TextField
+                                        className="product-form__item"
                                         required
                                         fullWidth
                                         type="number"
@@ -337,6 +337,7 @@ function CreateProduct() {
                                 Danh mục sản phẩm
                             </InputLabel>
                             <Select
+                                className="product-form__item"
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 name="category"

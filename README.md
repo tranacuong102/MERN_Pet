@@ -13,10 +13,6 @@
 
 # Những thành phần đã Responsive
 
-# Login Register Home Profile Cart CreateCategory CreatePost CreateProduct DeletedProducts Posts History DetailPayments Payments DetailProduct
-
-# Products
-
-# Menu Mobile chưa có chức năng
+# Login Register Home Profile Cart CreateCategory CreatePost CreateProduct DeletedProducts Posts History DetailPayments Payments DetailProduct Products
 
 https://niithanoi.edu.vn/15-array-method-cua-javascript.html

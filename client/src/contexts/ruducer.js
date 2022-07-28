@@ -4,13 +4,9 @@ import {
     SET_PAGE,
     SET_EDIT_PRODUCT,
     SET_VALUE_PRODUCT,
-    // SET_ADD_CART,
     SET_EDIT_POST,
     SET_VALUE_DEFAULT_POST,
 } from '../utils/Constants'
-
-// import { getCartCurrentUser } from '../models/User'
-// const userInfoCart = getCartCurrentUser()
 
 export const initState = {
     type: 'all',
@@ -28,7 +24,6 @@ export const initState = {
         images: '',
         category: '',
     },
-    // cart: userInfoCart && userInfoCart,
     editPost: false,
     post: {
         post_id: '',
