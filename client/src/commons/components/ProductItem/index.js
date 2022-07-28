@@ -111,7 +111,7 @@ function ProductItem({ product, callbackFn }) {
             })
             await setCartInfo([...cart, { ...product, count: 1 }])
         } else {
-            CoreService.showAlertError(
+            CoreService.showAlertWarning(
                 'Sản phẩm này đã nằm trong giỏ hàng của bạn!'
             )
         }
