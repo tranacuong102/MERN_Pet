@@ -97,12 +97,12 @@ const MobileMenuModal = ({ open, setOpen }) => {
                     </li>
                     <li className="modal-mobile__item">
                         <Button
-                            to="/posts"
+                            to="/"
                             fullWidth
                             className="modal-mobile__item-link"
                             iconLeft={<AttachMoneyIcon />}
                         >
-                            Khuyến mại
+                            Nạp tiền
                         </Button>
                     </li>
                     <li className="modal-mobile__item">
@@ -112,7 +112,7 @@ const MobileMenuModal = ({ open, setOpen }) => {
                             className="modal-mobile__item-link"
                             iconLeft={<ThumbUpAltIcon />}
                         >
-                            Nạp tiền
+                            Hỗ trợ
                         </Button>
                     </li>
                     <li className="modal-mobile__item">
