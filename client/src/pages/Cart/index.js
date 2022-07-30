@@ -182,10 +182,11 @@ const Cart = () => {
                             <div className="cart-bill__total-price">
                                 <span>Giá bán</span>
                                 <span>
-                                    {totalCoins.toLocaleString('vi', {
-                                        style: 'currency',
-                                        currency: 'VND',
-                                    })}
+                                    {totalCoins &&
+                                        totalCoins.toLocaleString('vi', {
+                                            style: 'currency',
+                                            currency: 'VND',
+                                        })}
                                 </span>
                             </div>
                             <Button
