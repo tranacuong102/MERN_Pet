@@ -7,7 +7,7 @@ import ProductItem from '../../commons/components/ProductItem'
 import Header from '../../commons/components/Header'
 import ProductService from '../../services/ProductService'
 
-import { MyContexts } from '../../contexts/MyContexts'
+import useStore from '../../stores/hooks/useStore'
 import Footer from '../../commons/components/Footer'
 
 import '../../styles/pages/Products.scss'
@@ -19,7 +19,7 @@ function Products() {
     const productsService = ProductService()
 
     // eslint-disable-next-line no-unused-vars
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
     const { type, sort } = state
 
     // Get Products & Filter - Sort - Pagination

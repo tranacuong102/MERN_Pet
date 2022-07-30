@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react'
 import CategoryService from '../../../services/CategoryService'
 import ListIcon from '@mui/icons-material/List'
 import Button from '../../widgets/Button'
-import { setPage, setSort, setType } from '../../../contexts/actions'
-import { MyContexts } from '../../../contexts/MyContexts'
+import { setPage, setSort, setType } from '../../../stores/context/actions'
+import useStore from '../../../stores/hooks/useStore'
 import './style.scss'
 
 function Sidebar() {
     const [categories, setCategories] = useState([])
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
     const { type } = state
 
     useEffect(() => {

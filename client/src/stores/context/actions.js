@@ -6,7 +6,7 @@ import {
     SET_VALUE_PRODUCT,
     SET_EDIT_POST,
     SET_VALUE_DEFAULT_POST,
-} from '../utils/Constants'
+} from '../../utils/Constants'
 
 export const setType = (payload) => ({
     type: SET_TYPE,

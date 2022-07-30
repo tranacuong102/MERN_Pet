@@ -1,9 +1,9 @@
 import BaseService from './BaseService'
-import { MyContexts } from '../contexts/MyContexts'
+import useStore from '../stores/hooks/useStore'
 
 function ProductService() {
     const API_END_POINT = 'api/products'
-    const [state] = MyContexts()
+    const [state] = useStore()
     const { type, sort, page } = state
 
     const getAllProducts = () => {

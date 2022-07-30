@@ -5,7 +5,7 @@ import { RecoilRoot } from 'recoil'
 import { viVN } from '@mui/material/locale'
 import { createTheme, ThemeProvider } from '@mui/material'
 import App from './App'
-import StoreProvider from './contexts/Provider'
+import { StoreProvider } from './stores/context'
 
 import reportWebVitals from './reportWebVitals'
 

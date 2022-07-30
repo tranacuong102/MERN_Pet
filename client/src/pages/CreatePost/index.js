@@ -12,8 +12,8 @@ import AnimationLoading from '../../commons/widgets/AnimationLoading'
 import { Button } from '@mui/material'
 import PostService from '../../services/PostService'
 import Image from '../../commons/widgets/Image'
-import { MyContexts } from '../../contexts/MyContexts'
-import { setEditPost, setValueDefaultPost } from '../../contexts/actions'
+import useStore from '../../stores/hooks/useStore'
+import { setEditPost, setValueDefaultPost } from '../../stores/context/actions'
 
 import '../../styles/pages/CreatePost.scss'
 
@@ -26,7 +26,7 @@ const CreatePost = () => {
     const [publicId, setPublicId] = useState('')
     const [images, setImages] = useState('')
 
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
 
     const { editPost, post } = state
 

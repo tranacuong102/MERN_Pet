@@ -4,15 +4,16 @@ import Image from '../../commons/widgets/Image'
 import Header from '../../commons/components/Header'
 import Footer from '../../commons/components/Footer'
 import PostService from '../../services/PostService'
-import { MyContexts } from '../../contexts/MyContexts'
-
-import '../../styles/pages/Posts.scss'
+import useStore from '../../stores/hooks/useStore'
 import Button from '../../commons/widgets/Button'
-import { setEditPost, setValueDefaultPost } from '../../contexts/actions'
+import { setEditPost, setValueDefaultPost } from '../../stores/context/actions'
 import { useNavigate } from 'react-router-dom'
 import { LIST_PATH } from '../../routes'
 import { getCurrentUser } from '../../models/User'
 import Modal from '../../commons/widgets/Modal'
+
+import '../../styles/pages/Posts.scss'
+
 function Posts() {
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
@@ -22,7 +23,7 @@ function Posts() {
     const [idPost, setIdPost] = useState('')
     const [titlePost, setTitlePost] = useState('')
     // eslint-disable-next-line no-unused-vars
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
 
     const currentUser = getCurrentUser()
     // eslint-disable-next-line no-unused-vars

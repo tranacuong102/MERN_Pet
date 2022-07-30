@@ -2,15 +2,16 @@ import { useEffect, useState } from 'react'
 import Button from '../../widgets/Button'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
-import { MyContexts } from '../../../contexts/MyContexts'
-import { setSort, setPage, setType } from '../../../contexts/actions'
+import useStore from '../../../stores/hooks/useStore'
+import { setSort, setPage, setType } from '../../../stores/context/actions'
 import CategoryService from '../../../services/CategoryService'
+
 import classNames from 'classnames/bind'
 import styles from './style.scss'
 const cx = classNames.bind(styles)
 
 function Filters({ totalProducts }) {
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
     const [categories, setCategories] = useState([])
     const { sort, page } = state
 

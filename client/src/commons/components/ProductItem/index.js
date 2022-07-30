@@ -4,8 +4,11 @@ import { getCurrentUser, getCartCurrentUser } from '../../../models/User'
 import Modal from '../../widgets/Modal'
 import Button from '../../widgets/Button'
 import { useCartInfo } from '../../../stores/hooks/useCartInfo'
-import { MyContexts } from '../../../contexts/MyContexts'
-import { setEditProduct, setValueProduct } from '../../../contexts/actions'
+import useStore from '../../../stores/hooks/useStore'
+import {
+    setEditProduct,
+    setValueProduct,
+} from '../../../stores/context/actions'
 import ProductService from '../../../services/ProductService'
 import AuthService from '../../../services/AuthService'
 import CoreService from '../../../services/CoreService'
@@ -27,7 +30,7 @@ function ProductItem({ product, callbackFn }) {
     })
     const productsService = ProductService()
     // eslint-disable-next-line no-unused-vars
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
 
     const cart = getCartCurrentUser()
 

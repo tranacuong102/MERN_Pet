@@ -16,8 +16,8 @@ import AnimationLoading from '../../commons/widgets/AnimationLoading'
 import ClearIcon from '@mui/icons-material/Clear'
 import UploadService from '../../services/UploadService'
 import ProductService from '../../services/ProductService'
-import { MyContexts } from '../../contexts/MyContexts'
-import { setEditProduct } from '../../contexts/actions'
+import useStore from '../../stores/hooks/useStore'
+import { setEditProduct } from '../../stores/context/actions'
 
 import '../../styles/pages/CreateProduct.scss'
 
@@ -33,7 +33,7 @@ function CreateProduct() {
     const [publicId, setPublicId] = useState('')
     const [showImageDefault, setShowImageDefault] = useState(true)
 
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
     const { isEditProduct, defaultValueProduct } = state
 
     // Check admin, nếu ko đúng admin đưa người dùng về Home page

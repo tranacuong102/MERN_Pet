@@ -5,14 +5,17 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import AddIcon from '@mui/icons-material/Add'
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder'
 import BorderColorIcon from '@mui/icons-material/BorderColor'
-import { setEditProduct, setValueProduct } from '../../../contexts/actions'
-import { MyContexts } from '../../../contexts/MyContexts'
+import {
+    setEditProduct,
+    setValueProduct,
+} from '../../../stores/context/actions'
+import useStore from '../../../stores/hooks/useStore'
 
 import './style.scss'
 
 function AdminDashboard() {
     // eslint-disable-next-line no-unused-vars
-    const [state, dispatch] = MyContexts()
+    const [state, dispatch] = useStore()
     const handleCreateProduct = () => {
         dispatch(setEditProduct(false))
         dispatch(
