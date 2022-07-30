@@ -5,7 +5,7 @@ import AddIcon from '@mui/icons-material/Add'
 import RemoveSharpIcon from '@mui/icons-material/RemoveSharp'
 import AuthService from '../../services/AuthService'
 import { useCartInfo } from '../../stores/hooks/useCartInfo'
-import { getCartCurrentUser } from '../../models/User'
+import { getCartCurrentUser, getCurrentUser } from '../../models/User'
 import Button from '../../commons/widgets/Button'
 
 import '../../styles/pages/Cart.scss'
@@ -15,7 +15,7 @@ const Cart = () => {
     const [totalCoins, setTotalCoins] = useState(0)
     const { setCartInfo } = useCartInfo()
     const cart = getCartCurrentUser()
-
+    const currentUser = getCurrentUser()
     useEffect(() => {
         const getTotalCoins = () => {
             const newCartChecked =
@@ -191,8 +191,9 @@ const Cart = () => {
                             </div>
                             <Button
                                 disable={
-                                    isCheckedInCart &&
-                                    isCheckedInCart.length === 0
+                                    (isCheckedInCart &&
+                                        isCheckedInCart.length === 0) ||
+                                    currentUser === null
                                 }
                                 to="/payments"
                                 fullWidth
