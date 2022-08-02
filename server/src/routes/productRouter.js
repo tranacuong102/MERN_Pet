@@ -8,13 +8,13 @@ router.get('/', productController.getProducts)
 
 router.get('/all', productController.getAllProducts)
 
-router.get('/deleted', productController.getDeletedProducts)
+router.get('/deleted', auth, authAdmin, productController.getDeletedProducts)
 
-router.post('/create', productController.createProduct)
+router.post('/create', auth, authAdmin, productController.createProduct)
 
-router.put('/update/:id', productController.updateProduct)
+router.put('/update/:id', auth, authAdmin, productController.updateProduct)
 
-router.patch('/restore/:id', productController.restoreProduct)
+router.patch('/restore/:id', auth, authAdmin, productController.restoreProduct)
 
 router.delete('/delete/:id', auth, authAdmin, productController.deleteProduct)
 
