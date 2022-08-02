@@ -1,8 +1,5 @@
 import { toast } from 'react-toastify'
-import { Subject } from 'rxjs'
 import { DEFAULT_TOAST_OPTIONS } from '../utils/Constants'
-
-const commonLoading = new Subject()
 
 const CoreService = {
     showAlertSuccess: (message = '') =>
@@ -12,15 +9,6 @@ const CoreService = {
     showAlertWarning: (message = '') =>
         toast.warning(message, DEFAULT_TOAST_OPTIONS),
     showAlertInfo: (message = '') => toast.info(message, DEFAULT_TOAST_OPTIONS),
-    showLoading: () => {
-        commonLoading.next(true)
-    },
-    hideLoading: () => {
-        commonLoading.next(false)
-    },
-    getLoading: () => {
-        return commonLoading.asObservable()
-    },
 }
 
 export default CoreService
